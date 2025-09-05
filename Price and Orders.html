@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Tamim Taxi</title>
+        <link rel="shortcut icon" href= "logo.png">
+        
+        <link rel="stylesheet" type="text/css" href="Tamimtaxi-css.css">
+
+        <script>
+            (function() {
+               'use strict';
+               var f,d,k,s;
+            function init(){ 
+               f=document.getElementById('theform');
+               f.reset();
+               document.getElementById('calc').onclick=function() {
+               d=document.getElementById('price').value;
+               k=document.getElementById('kilo').value;
+               
+               
+            if(isNaN(d)||d==''||isNaN(k)||k=='') {
+               f.reset();
+               alert('please enter a numerical value');   
+            
+               return;
+             }
+            else {
+            if(k<10) {
+               k=20;
+             }
+            else {
+               k=k;
+             }
+             
+                document.getElementById('tot').value='Kr  '+parseFloat(d*k); 
+                      
+            
+               }
+              }
+             }
+               window.addEventListener?
+               window.addEventListener('load',init,false):
+               window.attachEvent('onload',init);
+            })();
+            </script>
+    
+
+    </head>
+    
+    <body>
+        <header><img style="position:absolute; left:80px; top:20; width: 70px;" src="logo.png"></header>
+        <header><img style="display:block; margin-left:auto; margin-right:auto;" src= "company-name.png"></header>
+        <header><a href="Priser og bestilling .html"><img style="position:absolute;right:60px;top:20px; width:40px" src="Norsk flag.jpg"></a></header>
+        <header><img style="position:absolute;right:120px;top:20px; width:40px" src="british-flag.png"></header>
+        
+        <aside><a href= "Home Englesh.html"><button>HOME</button></a></aside>
+        <aside><a href="ABOUT US page.html"><button>ABOUT US</button></a></aside>
+        <aside><a href="Spesial Service.html"><button>SPECIAL SERVICE</button></a></aside>
+        <aside><a href="Contact Us.html"><button>CONTACT US</button></a></aside>
+        
+        <img style="position:absolute; width:500px; height: 250px;left:255px; bottom: 200px;" src= "Priser taxi.jpg">
+        
+        
+        <footer><strong><h3>You can pay with:</h3></strong></footer>
+        <footer><img style= "position: absolute; left:500px; bottom: 75px; width: 150px;"   src="visa-mastercard.jpg"></footer>
+        <footer><img style= "position: absolute; left:750px; bottom: 75px; width: 180px;"   src="vipps.png"></footer>
+        <footer><img style= "position: absolute; left:1000px; bottom: 80px; width: 180px; height:70px;"   src="Cash.jpg"></footer>
+        
+        <form id="theform" action="#">
+            
+            <div>
+                
+                <label for="price">kilometer price :</label>
+                <input id="price" type="text">
+             </div>
+             <div>
+                 <label for="kilo">Amount of kilometers :</label>
+                 <input id="kilo" type="text">
+             </div>
+             <div>
+                 <label>Total :</label>
+                 <input id="tot" type="text" readonly="readonly">
+             </div>
+             <div>
+                 <label></label>
+                  <input id="calc" type="button" value="calculate">
+                  <input id="r" type="reset" value="clear">
+    
+             </div>
+             <div>
+                
+                <label >Please, note that the total price, doesn't include the start price and extra services.
+                    Check the price table for that! </label>
+                
+             </div>
+             
+             </form>
+    </body>
+
+
+
+</html>
+
+
+
+
+
